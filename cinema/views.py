@@ -159,7 +159,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
     pagination_class = OrderPagination
     authentication_classes = (TokenAuthentication,)
-    permission_classes = (TokenAuthentication,)
+
 
     def get_permissions(self):
         if self.action in ["list", "create"]:
